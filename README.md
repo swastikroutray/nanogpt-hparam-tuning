@@ -145,7 +145,7 @@ and applying dropout removes useful capacity without solving a problem that does
 degrades gracefully and shows classic overfitting (validation loss rises while training loss holds steady) beyond 8 layers. Embedding dimension degrades catastrophically 
 at 256, with both training and validation loss rising together — pointing to an optimization/training-budget failure rather than overfitting.***
 
-4)***Data-exposure hyperparameters (batch size, block size) show clean monotonic improvement across the entire tested range, with no evidence of a turning point yet. 
+4) ***Data-exposure hyperparameters (batch size, block size) show clean monotonic improvement across the entire tested range, with no evidence of a turning point yet. 
 These are the two hyperparameters most likely to yield further gains if pushed beyond the ranges tested here.***
 
 Overall, the best-performing configuration observed across all sweeps combines a learning rate near 3e-3, no dropout, roughly 8 transformer layers, 
