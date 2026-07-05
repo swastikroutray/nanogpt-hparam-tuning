@@ -1,4 +1,4 @@
-<img width="989" height="590" alt="image" src="https://github.com/user-attachments/assets/cc4489c6-e621-41f4-8d6e-3bc0c248d9e8" />**1. Introduction**
+**1. Introduction**
 
 Transformer-based language models have become the foundation of modern Natural Language Processing (NLP), powering systems such as GPT, Claude, Gemini, and Llama. 
 Although the Transformer architecture remains largely consistent, its performance depends heavily on selecting appropriate hyperparameters. 
