@@ -61,6 +61,7 @@ The experiments investigated:
 Training loss and validation loss after convergence were recorded for every configuration.
 
 **3. Results**
+
 **3.1 Effect of Learning Rate**
 <img width="989" height="590" alt="image" src="https://github.com/user-attachments/assets/ca6da71b-350f-4faf-aa25-77cf1519c7f9" />
 
