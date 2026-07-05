@@ -6,7 +6,7 @@ Hyperparameters such as learning rate, dropout, embedding dimension, number of t
 affect convergence speed, training stability, computational efficiency, and generalization.
 
 The objective of this study was to systematically investigate how different hyperparameters influence the training and validation performance of a Transformer 
-language model trained on Shakespeare's Romeo and Juliet. Rather than modifying the architecture itself, this work focuses on empirical hyperparameter optimization 
+language model trained on War and Peace. Rather than modifying the architecture itself, this work focuses on empirical hyperparameter optimization 
 by varying one parameter at a time while keeping the remaining parameters fixed.
 
 The primary evaluation metric used throughout the experiments was cross-entropy loss, measured on both the training and validation datasets. 
@@ -14,6 +14,7 @@ Lower validation loss indicates better generalization to unseen text, while the 
 into possible overfitting or underfitting.
 
 **2. Methodology**
+
 **2.1 Model**
 
 The experiments were conducted using a decoder-only Transformer language model implemented in PyTorch, 
