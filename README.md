@@ -94,8 +94,8 @@ mild overfitting: the extra capacity from added depth is being used to fit train
 sweet spot for this configuration, balancing capacity against overfitting risk.
 
 **3.4 Effect of Embedding Dimension**
-![<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/b46c2d7c-fadd-4f8b-9590-403a5a410e19" />
-]
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/b46c2d7c-fadd-4f8b-9590-403a5a410e19" />
+
 Embedding dimension was tested at 32, 64, 128, and 256. Both losses drop sharply from 32 to 64 (training: ~1.68 → ~1.55; validation: ~1.75 → ~1.61), stay roughly flat 
 from 64 to 128 (best point, training ~1.53, validation ~1.62), and then increase dramatically at 256, with both losses jumping to ~2.35–2.36 — worse than even the
 smallest embedding size tested. This is a much larger and more abrupt degradation than the gradual overfitting seen with layer depth, and both training and validation 
