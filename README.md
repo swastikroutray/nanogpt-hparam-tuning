@@ -62,8 +62,8 @@ Training loss and validation loss after convergence were recorded for every conf
 
 **3. Results**
 **3.1 Effect of Learning Rate**
-![<img width="989" height="590" alt="image" src="https://github.com/user-attachments/assets/ca6da71b-350f-4faf-aa25-77cf1519c7f9" />
-]
+<img width="989" height="590" alt="image" src="https://github.com/user-attachments/assets/ca6da71b-350f-4faf-aa25-77cf1519c7f9" />
+
 Learning rate was swept across 1e-5, 3e-5, 1e-4, 3e-4, 1e-3, 3e-3, 1e-2, and 3e-2. Performance follows a classic U-shaped curve. 
 At very low learning rates (1e-5), both training and validation loss are high (~2.75 and ~2.73, respectively), indicating the model 
 is undertrained — it simply hasn't moved far enough from initialization. Loss improves steadily as the learning rate increases, 
@@ -74,8 +74,8 @@ to overshoot minima. The gap between training and validation loss stays small an
 rate does not strongly affect overfitting — its primary effect is on optimization stability and convergence speed. 3e-3 stands out as the clear optimum in this range.
 
 **3.2 Effect of Dropout (Sweep 1)**
-![<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/573fab92-4105-4225-be8f-c5521f02332e" />
-]
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/573fab92-4105-4225-be8f-c5521f02332e" />
+
 This sweep varied dropout rate from 0.0 to 0.5. Both training and validation loss increase monotonically as dropout increases: training loss rises from ~1.56 
 at dropout 0.0 to ~1.90 at dropout 0.5, and validation loss rises from ~1.65 to ~1.96 over the same range. Unlike the classic regularization story where dropout
 narrows the train/validation gap at the cost of some training loss, here the gap between the two curves stays roughly constant (~0.08–0.10) across the entire sweep. 
@@ -84,8 +84,8 @@ The most likely explanation is that the model is not overfitting much to begin w
 so dropout's regularizing effect has no overfitting problem to solve, and its cost — reduced effective capacity per training step — dominates.
 
 **3.3 Effect of Number of Transformer Layers**
-![<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/3be37a80-9cc1-47eb-ba7d-f8d7658b061c" />
-]
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/3be37a80-9cc1-47eb-ba7d-f8d7658b061c" />
+
 Depth was swept from 2 to 10 layers. Training loss decreases fairly steadily with depth, from ~1.62 at 2 layers to ~1.54 at 8 layers, then plateaus (~1.55 at 10 layers).
 Validation loss tells a more interesting story: it drops from ~1.70 (2 layers) to a minimum of ~1.61 at 8 layers, but then increases again to ~1.63 at 10 layers — 
 while training loss keeps flat or slightly improves. This divergence at 10 layers, where validation loss increases even as training loss holds steady, is a signature of 
@@ -104,8 +104,8 @@ size required a corresponding learning rate adjustment that wasn't made, destabi
 isolation — it needs to be paired with adjustments elsewhere (learning rate, training steps, or both).
 
 **3.5 Effect of Batch Size**
-![<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/7c7fa7a1-2c7c-4907-87eb-00a5c6b0251c" />
-]
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/7c7fa7a1-2c7c-4907-87eb-00a5c6b0251c" />
+
 Batch size was swept across 16, 32, 64, 128, 256, and 512. Both training and validation loss decrease monotonically and substantially across the entire range: training loss 
 falls from ~1.55 at batch size 16 to ~1.25 at batch size 512, and validation loss falls from ~1.61 to ~1.40 over the same range. Notably, there is no sign of the 
 improvement plateauing within the tested range — 512 is still the best setting. The train/validation gap narrows slightly at larger batch sizes, suggesting larger 
@@ -113,8 +113,8 @@ batches are not just accelerating optimization but also mildly improving general
 and most consistent monotonic effect observed across all seven experiments, and it suggests batch size may be worth pushing even higher than 512 in follow-up work.
 
 **3.6 Effect of Block Size (Context Length)**
-![<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/f0f4e9ef-f04e-4d22-991b-9ad695c16bff" />
-]
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/f0f4e9ef-f04e-4d22-991b-9ad695c16bff" />
+
 Block size (the context window the model attends over) was tested at 32, 64, 128, and 256 tokens. Like batch size, this shows a clean monotonic improvement: training loss 
 drops from ~1.38 at block size 32 to ~1.19 at block size 256, and validation loss drops from ~1.49 to ~1.33 over the same range. The rate of improvement is decreasing 
 (the gain from 128→256 is smaller than from 32→64), suggesting diminishing returns are beginning to set in, but the curve has not yet flattened out entirely by 256. 
@@ -122,8 +122,8 @@ This makes intuitive sense: longer context gives the model more information to c
 in the data has already been captured.
 
 **3.7 Effect of Dropout (Sweep 2)**
-![<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/6a196137-ccb5-4d16-8b47-3cb06a09a4cd" />
-]
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/6a196137-ccb5-4d16-8b47-3cb06a09a4cd" />
+
 A second, finer-grained dropout sweep was run over 0.0, 0.05, 0.1, 0.15, and 0.2, using a different baseline configuration than Sweep 1. The pattern is the same
 direction as before: both training and validation loss increase monotonically as dropout increases. Training loss rises from ~1.78 at dropout 0.0 to ~2.02 at 
 dropout 0.2, and validation loss rises from ~1.84 to ~2.06 over the same range. As in Sweep 1, the gap between training and validation loss stays roughly constant 
