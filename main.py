@@ -29,7 +29,7 @@ dropout = 0.2 #regularization used to reduce overfitting
 
 torch.manual_seed(1337) #used to get the same set of random numbers everytime
 
-#the text file, here I used Shakespeare's Romeo and Juliet
+#the text file
 with open('input2.txt', 'r', encoding='utf-8') as f:
     text = f.read()
 
